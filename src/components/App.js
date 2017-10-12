@@ -11,18 +11,15 @@ class App extends Component {
         this.state = {
             mat: createBlankBoard(5,5)
         }
+
+        this.startGame = this.startGame.bind(this);
     }
 
+    startGame(){
+        
+    }
 
     render(){
-        const {mat} = this.state;
-        const snake = [
-            { r: 0, c: 1},
-            { r: 0, c: 0},
-            { r: 4, c: 4},
-        ];
-
-        const matrix = addSnakeToBoard([...mat], snake);
 
         return(
             <Board arr={mat}/>
