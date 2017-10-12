@@ -7,9 +7,9 @@ const progressSnake = (snake, direction, food) => {
     };
 
     if(direction === "up"){
-        newHead.r = newHead.r + 1;
-    }else if(direction === "down"){
         newHead.r = newHead.r - 1;
+    }else if(direction === "down"){
+        newHead.r = newHead.r + 1;
     }else if(direction === "right"){
         newHead.c = newHead.c + 1;
     }else{

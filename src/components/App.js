@@ -3,6 +3,7 @@ import Board from './board/Board';
 
 import addSnakeToBoard from '../utils/addSnakeToBoard';
 import createBlankBoard from '../utils/createBlankBoard';
+import progressSnake from '../utils/progressSnake';
 
 class App extends Component {
     constructor(props){
@@ -20,6 +21,10 @@ class App extends Component {
     }
 
     render(){
+        const { mat } = this.state;
+
+        const newMat = addSnakeToBoard( [...mat], progressSnake( [{r:0, c:0}], 'down', true  ), );
+        
 
         return(
             <Board arr={mat}/>
