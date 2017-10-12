@@ -10,3 +10,5 @@ const createBlankBoard = (r, c) => {
 
     return arr;
 }
+
+export default createBlankBoard;
