@@ -12,9 +12,22 @@ const style = {
     alignItems: "center",
 }
 
+const getPixel = (t, i) => {
+    switch(t){
+        case "f":
+            return <Food key={i}/>;
+        case "b":
+            return <SBody key={i}/>;
+        case "h":
+            return <SHead key={i}/>;
+        default:
+            return <Blank key={i}/>;
+    }
+};
+
 const Row = ({arr}) => (
     <div style={style}>
-        {arr.map( (x, i) => )}
+        {arr.map( (x, i) => getPixel(x, i) )}
     </div>
 );
 

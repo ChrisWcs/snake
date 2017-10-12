@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Board = () => (
+import Row from './Row';
+
+const Board = ({arr}) => (
     <div>
+        {arr.map( (r, i) => <Row key={i} arr={r} />)}
     </div>
 );
 
